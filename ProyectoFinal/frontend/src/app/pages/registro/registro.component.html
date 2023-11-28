@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="/assets/Images/Logo.png" alt="Logo">
+        </div>
+        <h1>Registro</h1>
+        <form (ngSubmit)="registro()" #registroForm="ngForm" class="login-form">
+            <input type="text" ngModel placeholder="Nombre" name="Nombre" required>
+            <input type="text" ngModel placeholder="Apellido" name="Apellido" required>
+            <input type="text" ngModel placeholder="Correo Electronico" name="Correo" required>
+            <input type="number" ngModel placeholder="Edad" name="Edad" required>
+            <input type="text" ngModel placeholder="Usuario" name="Usuario" required>
+            <input type="password" ngModel placeholder="Contraseña" name="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+        <div class="create-account-link">
+            <p>¿Ya tienes una cuenta? <a routerLink="/inicio">Iniciar sesión</a></p>
+        </div>
+    </div>
+</body>
+</html>

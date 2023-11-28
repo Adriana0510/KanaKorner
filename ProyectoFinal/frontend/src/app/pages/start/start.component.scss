@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button-container {
+    position: relative;
+    text-align: center;
+}
+
+.hiragana-button,
+.katakana-button,
+.kanji-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 250px 200px;
+    background-color: #FFFFFF;
+    border: 5px solid #b41e22;
+    border-radius: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #b41e22;
+    position: relative;
+}
+
+.katakana-button {
+    border: 5px solid #3b8a53;
+    color: #3b8a53;
+}
+
+.kanji-button {
+    border: 5px solid #054a95;
+    color: #054a95;
+}
+
+.hiragana-button:hover,
+.katakana-button:hover,
+.kanji-button:hover {
+    background-color: #fffdf7;
+}
+
+.button-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 275px;
+}
+.header-rectangle {
+    background-color: white;
+    width: 100%;
+    height: 150px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+.rectangle {
+    background-color: white;
+    width: 100%;
+    height: 125px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100; 
+}
+.title-container {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 30px;
+}
+
+.logo-image {
+    position: absolute;
+    top: 0%;
+    left: 8%;
+    width: 175px;
+    height: 150px;
+    margin-right: 20px;
+}

@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+
+$pink: #e95f9d;
+$dark-pink: #dc498b;
+$red: #b41e22;
+$green: #3b8a53;
+$blue: #054a95;
+$white: #FFFFFF;
+$off-white: #f7f2e3;
+
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $off-white; 
+
+$link:$white;
+
+$control-border-width:2px;
+$input-border-solor: transparent;
+$input-shasow: none;
+
+html{
+    background: linear-gradient(to right top, $off-white, $off-white);
+}
+
+html{
+    height: 100%;
+}
+
