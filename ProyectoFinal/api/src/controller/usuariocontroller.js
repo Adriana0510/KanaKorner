@@ -4,12 +4,12 @@ const Estudiante = require('../model/estudiante');
 //insertar
 async function crear(req, res) {
     try {
-      const { nombre, apellido, correo, edad, usuario, contraseña } = req.body;
+      const { nombre, apellido, correo, edad, usuario, contrasena } = req.body;
       
-      const nuevoEstudiante = new Estudiante({ nombre, apellido, correo, edad });
+      const nuevoEstudiante = new Estudiante({ nombre, apellido, correoElectronico: correo, edad });
       await nuevoEstudiante.save();
       
-      const nuevoUsuario = new Usuario({ usuario, contraseña });
+      const nuevoUsuario = new Usuario({ usuario, contraseña: contrasena });
       await nuevoUsuario.save();
       
       res.status(201).json({ message: 'Registro exitoso' });

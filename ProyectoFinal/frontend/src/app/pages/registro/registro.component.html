@@ -9,12 +9,12 @@
         </div>
         <h1>Registro</h1>
         <form (ngSubmit)="registro()" #registroForm="ngForm" class="login-form">
-            <input type="text" ngModel placeholder="Nombre" name="Nombre" required>
-            <input type="text" ngModel placeholder="Apellido" name="Apellido" required>
-            <input type="text" ngModel placeholder="Correo Electronico" name="Correo" required>
-            <input type="number" ngModel placeholder="Edad" name="Edad" required>
-            <input type="text" ngModel placeholder="Usuario" name="Usuario" required>
-            <input type="password" ngModel placeholder="Contraseña" name="Contraseña" required>
+            <input type="text" ngModel placeholder="Nombre" name="nombre" required>
+            <input type="text" ngModel placeholder="Apellido" name="apellido" required>
+            <input type="text" ngModel placeholder="Correo Electronico" name="correo" required>
+            <input type="number" ngModel placeholder="Edad" name="edad" required>
+            <input type="text" ngModel placeholder="Usuario" name="usuario" required>
+            <input type="password" ngModel placeholder="Contraseña" name="contrasena" required>
             <button type="submit">Registrarse</button>
         </form>
         <div class="create-account-link">

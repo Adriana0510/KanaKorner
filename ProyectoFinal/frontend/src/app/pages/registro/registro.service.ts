@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegistroService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
 
-  registrarUsuario(formData: FormData): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/usuario/crear`, formData);
+  registrarUsuario(formData: object): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}usuario/crear`, formData);
   }
 }
