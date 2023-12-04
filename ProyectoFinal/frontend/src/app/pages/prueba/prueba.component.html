@@ -10,92 +10,96 @@
                 <p>Aqui podras evaluar tu conocimiento en las varias escrituras japonesas.</p>
             </div>
         </div>
-	<section  >
+	<section>
 	            <div class="question question_1">
 					<h2><span>Lee el romanji y escoge el hiragana correcto.</span></h2>
 							<ul class="question_list">
-								<li *ngFor="let pregunta of preguntas; let i = index">
+								<li>
 									<ol start="1">
 										<li>
                                             <h2><span>NO</span></h2>
                                             <ul>
-												<p><label><input type="radio" name="question_1_1" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>こ</i></b></label></p>
-												<p><label><input type="radio" name="question_1_1" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>に</i></b></label></p>
-												<p><label><input type="radio" name="question_1_1" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>の</i></b></label></p>
+												<p><label><input type="radio" name="question_1_1" value="A" [(ngModel)]="userAnswers.question_1['1']"><span class="mark"></span><b class="form"><i>こ</i></b></label></p>
+												<p><label><input type="radio" name="question_1_1" value="B" [(ngModel)]="userAnswers.question_1['1']"><span class="mark"></span><b class="form"><i>に</i></b></label></p>
+												<p><label><input type="radio" name="question_1_1" value="C" [(ngModel)]="userAnswers.question_1['1']"><span class="mark"></span><b class="form"><i>の</i></b></label></p>
 											</ul>
 										</li>
 										<li>
 											<h2><span>KU</span></h2>
 											<ul>
 
-												<li><label><input type="radio" name="question_1_2" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>し</i></b></label></li>
-												<li><label><input type="radio" name="question_1_2" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>く</i></b></label></li>
-												<li><label><input type="radio" name="question_1_2" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>つ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_2" value="A" [(ngModel)]="userAnswers.question_1['2']"><span class="mark"></span><b class="form"><i>し</i></b></label></li>
+												<li><label><input type="radio" name="question_1_2" value="B" [(ngModel)]="userAnswers.question_1['2']"><span class="mark"></span><b class="form"><i>く</i></b></label></li>
+												<li><label><input type="radio" name="question_1_2" value="C" [(ngModel)]="userAnswers.question_1['2']"><span class="mark"></span><b class="form"><i>つ</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>SA</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_3" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>き</i></b></label></li>
-												<li><label><input type="radio" name="question_1_3" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>さ</i></b></label></li>
-												<li><label><input type="radio" name="question_1_3" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>ち</i></b></label></li>
+												<li><label><input type="radio" name="question_1_3" value="A" [(ngModel)]="userAnswers.question_1['3']"><span class="mark"></span><b class="form"><i>き</i></b></label></li>
+												<li><label><input type="radio" name="question_1_3" value="B" [(ngModel)]="userAnswers.question_1['3']"><span class="mark"></span><b class="form"><i>さ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_3" value="C" [(ngModel)]="userAnswers.question_1['3']"><span class="mark"></span><b class="form"><i>ち</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>NU</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_4" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>ね</i></b></label></li>
-												<li><label><input type="radio" name="question_1_4" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>ぬ</i></b></label></li>
-												<li><label><input type="radio" name="question_1_4" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>わ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_4" value="A" [(ngModel)]="userAnswers.question_1['4']"><span class="mark"></span><b class="form"><i>ね</i></b></label></li>
+												<li><label><input type="radio" name="question_1_4" value="B" [(ngModel)]="userAnswers.question_1['4']"><span class="mark"></span><b class="form"><i>ぬ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_4" value="C" [(ngModel)]="userAnswers.question_1['4']"><span class="mark"></span><b class="form"><i>わ</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>NI</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_5" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>け</i></b></label></li>
-												<li><label><input type="radio" name="question_1_5" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>た</i></b></label></li>
-												<li><label><input type="radio" name="question_1_5" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>に</i></b></label></li>
+												<li><label><input type="radio" name="question_1_5" value="A" [(ngModel)]="userAnswers.question_1['5']"><span class="mark"></span><b class="form"><i>け</i></b></label></li>
+												<li><label><input type="radio" name="question_1_5" value="B" [(ngModel)]="userAnswers.question_1['5']"><span class="mark"></span><b class="form"><i>た</i></b></label></li>
+												<li><label><input type="radio" name="question_1_5" value="C" [(ngModel)]="userAnswers.question_1['5']"><span class="mark"></span><b class="form"><i>に</i></b></label></li>
 
 											</ul>
 										</li>
+									</ol>
+								</li>
+								<li>
+									<ol start="6">
 										<li>
 											<h2><span>A</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_6" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>あ</i></b></label></li>
-												<li><label><input type="radio" name="question_1_6" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>か</i></b></label></li>
-												<li><label><input type="radio" name="question_1_6" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>め</i></b></label></li>
+												<li><label><input type="radio" name="question_1_6" value="A" [(ngModel)]="userAnswers.question_1['6']"><span class="mark"></span><b class="form"><i>あ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_6" value="B" [(ngModel)]="userAnswers.question_1['6']"><span class="mark"></span><b class="form"><i>か</i></b></label></li>
+												<li><label><input type="radio" name="question_1_6" value="C" [(ngModel)]="userAnswers.question_1['6']"><span class="mark"></span><b class="form"><i>め</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>SU</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_7" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>な</i></b></label></li>
-												<li><label><input type="radio" name="question_1_7" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>む</i></b></label></li>
-												<li><label><input type="radio" name="question_1_7" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>す</i></b></label></li>
+												<li><label><input type="radio" name="question_1_7" value="A" [(ngModel)]="userAnswers.question_1['7']"><span class="mark"></span><b class="form"><i>な</i></b></label></li>
+												<li><label><input type="radio" name="question_1_7" value="B" [(ngModel)]="userAnswers.question_1['7']"><span class="mark"></span><b class="form"><i>む</i></b></label></li>
+												<li><label><input type="radio" name="question_1_7" value="C" [(ngModel)]="userAnswers.question_1['7']"><span class="mark"></span><b class="form"><i>す</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>TO</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_8" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>て</i></b></label></li>
-												<li><label><input type="radio" name="question_1_8" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>と</i></b></label></li>
-												<li><label><input type="radio" name="question_1_8" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>え</i></b></label></li>
+												<li><label><input type="radio" name="question_1_8" value="A" [(ngModel)]="userAnswers.question_1['8']"><span class="mark"></span><b class="form"><i>て</i></b></label></li>
+												<li><label><input type="radio" name="question_1_8" value="B" [(ngModel)]="userAnswers.question_1['8']"><span class="mark"></span><b class="form"><i>と</i></b></label></li>
+												<li><label><input type="radio" name="question_1_8" value="C" [(ngModel)]="userAnswers.question_1['8']"><span class="mark"></span><b class="form"><i>え</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>SO</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_9" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>う</i></b></label></li>
-												<li><label><input type="radio" name="question_1_9" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>そ</i></b></label></li>
-												<li><label><input type="radio" name="question_1_9" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>せ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_9" value="A" [(ngModel)]="userAnswers.question_1['9']"><span class="mark"></span><b class="form"><i>う</i></b></label></li>
+												<li><label><input type="radio" name="question_1_9" value="B" [(ngModel)]="userAnswers.question_1['9']"><span class="mark"></span><b class="form"><i>そ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_9" value="C" [(ngModel)]="userAnswers.question_1['9']"><span class="mark"></span><b class="form"><i>せ</i></b></label></li>
 											</ul>
 										</li>
 										<li>
 											<h2><span>I</span></h2>
 											<ul>
-												<li><label><input type="radio" name="question_1_10" (click)="seleccionarRespuestaHiragana(pregunta, 'A')"><span class="mark"></span><b class="form"><i>い</i></b></label></li>
-												<li><label><input type="radio" name="question_1_10" (click)="seleccionarRespuestaHiragana(pregunta, 'B')"><span class="mark"></span><b class="form"><i>り</i></b></label></li>
-												<li><label><input type="radio" name="question_1_10" (click)="seleccionarRespuestaHiragana(pregunta, 'C')"><span class="mark"></span><b class="form"><i>こ</i></b></label></li>
+												<li><label><input type="radio" name="question_1_10" value="A" [(ngModel)]="userAnswers.question_1['10']"><span class="mark"></span><b class="form"><i>い</i></b></label></li>
+												<li><label><input type="radio" name="question_1_10" value="B" [(ngModel)]="userAnswers.question_1['10']"><span class="mark"></span><b class="form"><i>り</i></b></label></li>
+												<li><label><input type="radio" name="question_1_10" value="C" [(ngModel)]="userAnswers.question_1['10']"><span class="mark"></span><b class="form"><i>こ</i></b></label></li>
 											</ul>
 										</li>
 									</ol>
@@ -103,8 +107,9 @@
 								</li>
 							</ul>
 							<div class="btn_pane">
-			    		<button class="answer" (click)="evaluarHiragana()">Respuesta</button>
-                    <span id="myresults1" class="my-results">Cual sera tu resultado...</span>
+			    		<button class="answer" (click)="evaluateAnswers('question_1')">Respuesta</button>
+						<button class="again" (click)="resetQuiz('question_1')">Otra vez</button>
+                    <span id="myresults1" class="my-results">{{ results.question_1}}</span>
 				</div>
 			</div>
 		</section>
@@ -120,42 +125,42 @@
 									<li>
 										<h2><span>TO</span></h2>
 										<ul>
-											<p><label><input type="radio" name="question_2_1" ><span class="mark"></span><b class="form"><i>ヌ</i></b></label></p>
-											<p><label><input type="radio" name="question_2_1" value="B"><span class="mark"></span><b class="form"><i>サ</i></b></label></p>
-											<p><label><input type="radio" name="question_2_1" value="C"><span class="mark"></span><b class="form"><i>ト</i></b></label></p>
+											<p><label><input type="radio" name="question_2_1" value="A" [(ngModel)]="userAnswers.question_2['1']"><span class="mark"></span><b class="form"><i>ヌ</i></b></label></p>
+											<p><label><input type="radio" name="question_2_1" value="B" [(ngModel)]="userAnswers.question_2['1']"><span class="mark"></span><b class="form"><i>サ</i></b></label></p>
+											<p><label><input type="radio" name="question_2_1" value="C" [(ngModel)]="userAnswers.question_2['1']"><span class="mark"></span><b class="form"><i>ト</i></b></label></p>
 										</ul>
 									</li>
 									<li>
 										<h2><span>CHI</span></h2>
 										<ul>
 
-											<li><label><input type="radio" name="question_2_2" value="A"><span class="mark"></span><b class="form"><i>テ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_2" value="B"><span class="mark"></span><b class="form"><i>チ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_2" value="C"><span class="mark"></span><b class="form"><i>ケ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_2" value="A" [(ngModel)]="userAnswers.question_2['2']"><span class="mark"></span><b class="form"><i>テ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_2" value="B" [(ngModel)]="userAnswers.question_2['2']"><span class="mark"></span><b class="form"><i>チ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_2" value="C" [(ngModel)]="userAnswers.question_2['2']"><span class="mark"></span><b class="form"><i>ケ</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>SHI</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_3" value="A"><span class="mark"></span><b class="form"><i>ソ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_3" value="B"><span class="mark"></span><b class="form"><i>ツ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_3" value="C"><span class="mark"></span><b class="form"><i>シ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_3" value="A" [(ngModel)]="userAnswers.question_2['3']"><span class="mark"></span><b class="form"><i>ソ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_3" value="B" [(ngModel)]="userAnswers.question_2['3']"><span class="mark"></span><b class="form"><i>ツ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_3" value="C" [(ngModel)]="userAnswers.question_2['3']"><span class="mark"></span><b class="form"><i>シ</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>SE</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_4" value="A"><span class="mark"></span><b class="form"><i>エ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_4" value="B"><span class="mark"></span><b class="form"><i>せ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_4" value="C"><span class="mark"></span><b class="form"><i>二</i></b></label></li>
+											<li><label><input type="radio" name="question_2_4" value="A" [(ngModel)]="userAnswers.question_2['4']"><span class="mark"></span><b class="form"><i>エ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_4" value="B" [(ngModel)]="userAnswers.question_2['4']"><span class="mark"></span><b class="form"><i>せ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_4" value="C" [(ngModel)]="userAnswers.question_2['4']"><span class="mark"></span><b class="form"><i>二</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>O</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_5" value="A"><span class="mark"></span><b class="form"><i>オ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_5" value="B"><span class="mark"></span><b class="form"><i>ノ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_5" value="C"><span class="mark"></span><b class="form"><i>イ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_5" value="A" [(ngModel)]="userAnswers.question_2['5']"><span class="mark"></span><b class="form"><i>オ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_5" value="B" [(ngModel)]="userAnswers.question_2['5']"><span class="mark"></span><b class="form"><i>ノ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_5" value="C" [(ngModel)]="userAnswers.question_2['5']"><span class="mark"></span><b class="form"><i>イ</i></b></label></li>
 
 										</ul>
 									</li>
@@ -166,41 +171,41 @@
 									<li>
 										<h2><span>KU</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_6" value="A"><span class="mark"></span><b class="form"><i>カ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_6" value="B"><span class="mark"></span><b class="form"><i>タ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_6" value="C"><span class="mark"></span><b class="form"><i>ク</i></b></label></li>
+											<li><label><input type="radio" name="question_2_6" value="A" [(ngModel)]="userAnswers.question_2['6']"><span class="mark"></span><b class="form"><i>カ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_6" value="B" [(ngModel)]="userAnswers.question_2['6']"><span class="mark"></span><b class="form"><i>タ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_6" value="C" [(ngModel)]="userAnswers.question_2['6']"><span class="mark"></span><b class="form"><i>ク</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>FU</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_7" value="A"><span class="mark"></span><b class="form"><i>キ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_7" value="B"><span class="mark"></span><b class="form"><i>ス</i></b></label></li>
-											<li><label><input type="radio" name="question_2_7" value="C"><span class="mark"></span><b class="form"><i>フ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_7" value="A" [(ngModel)]="userAnswers.question_2['7']"><span class="mark"></span><b class="form"><i>キ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_7" value="B" [(ngModel)]="userAnswers.question_2['7']"><span class="mark"></span><b class="form"><i>ス</i></b></label></li>
+											<li><label><input type="radio" name="question_2_7" value="C" [(ngModel)]="userAnswers.question_2['7']"><span class="mark"></span><b class="form"><i>フ</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>U</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_8" value="A"><span class="mark"></span><b class="form"><i>モ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_8" value="B"><span class="mark"></span><b class="form"><i>ウ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_8" value="C"><span class="mark"></span><b class="form"><i>ヮ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_8" value="A" [(ngModel)]="userAnswers.question_2['8']"><span class="mark"></span><b class="form"><i>モ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_8" value="B" [(ngModel)]="userAnswers.question_2['8']"><span class="mark"></span><b class="form"><i>ウ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_8" value="C" [(ngModel)]="userAnswers.question_2['8']"><span class="mark"></span><b class="form"><i>ヮ</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>KO</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_9" value="A"><span class="mark"></span><b class="form"><i>コ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_9" value="B"><span class="mark"></span><b class="form"><i>ト</i></b></label></li>
-											<li><label><input type="radio" name="question_2_9" value="C"><span class="mark"></span><b class="form"><i>ロ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_9" value="A" [(ngModel)]="userAnswers.question_2['9']"><span class="mark"></span><b class="form"><i>コ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_9" value="B" [(ngModel)]="userAnswers.question_2['9']"><span class="mark"></span><b class="form"><i>ト</i></b></label></li>
+											<li><label><input type="radio" name="question_2_9" value="C" [(ngModel)]="userAnswers.question_2['9']"><span class="mark"></span><b class="form"><i>ロ</i></b></label></li>
 										</ul>
 									</li>
 									<li>
 										<h2><span>KE</span></h2>
 										<ul>
-											<li><label><input type="radio" name="question_2_10" value="A"><span class="mark"></span><b class="form"><i>ケ</i></b></label></li>
-											<li><label><input type="radio" name="question_2_10" value="B"><span class="mark"></span><b class="form"><i>ク</i></b></label></li>
-											<li><label><input type="radio" name="question_2_10" value="C"><span class="mark"></span><b class="form"><i>ァ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_10" value="A" [(ngModel)]="userAnswers.question_2['10']"><span class="mark"></span><b class="form"><i>ケ</i></b></label></li>
+											<li><label><input type="radio" name="question_2_10" value="B" [(ngModel)]="userAnswers.question_2['10']"><span class="mark"></span><b class="form"><i>ク</i></b></label></li>
+											<li><label><input type="radio" name="question_2_10" value="C" [(ngModel)]="userAnswers.question_2['10']"><span class="mark"></span><b class="form"><i>ァ</i></b></label></li>
 										</ul>
 									</li>
 								</ol>
@@ -208,8 +213,9 @@
 							</li>
 						</ul>
 						<div class="btn_pane">
-					<button class="answer" (click)="evaluarKatakana()">Respuesta</button>
-				<span id="myresults2" class="my-results">Cual sera tu resultado...</span>
+					<button class="answer" (click)="evaluateAnswers('question_2')">Respuesta</button>
+					<button class="again" (click)="resetQuiz('question_2')">Otra vez</button>
+				<span id="myresults2" class="my-results">{{ results.question_2}}</span>
 			</div>
 		</div>
 	</section>
@@ -218,49 +224,49 @@
 
 	<section>
 		<div class="question question_3">
-			<h2><span>Lee el romanji y escoge el kanji correcto.</span></h2>
+			<h2><span>Lee el kani y escoge el furigana correcto.</span></h2>
 					<ul class="question_list">
 						<li>
 							<ol start="1">
 								<li>
 									<h2><span>魚</span></h2>
 									<ul>
-										<p><label><input type="radio" name="question_3_1" value="A"><span class="mark"></span><b class="form"><i>さかな</i></b></label></p>
-										<p><label><input type="radio" name="question_3_1" value="B"><span class="mark"></span><b class="form"><i>にく</i></b></label></p>
-										<p><label><input type="radio" name="question_3_1" value="C"><span class="mark"></span><b class="form"><i>たまご</i></b></label></p>
+										<p><label><input type="radio" name="question_3_1" value="A" [(ngModel)]="userAnswers.question_3['1']"><span class="mark"></span><b class="form"><i>さかな</i></b></label></p>
+										<p><label><input type="radio" name="question_3_1" value="B" [(ngModel)]="userAnswers.question_3['1']"><span class="mark"></span><b class="form"><i>にく</i></b></label></p>
+										<p><label><input type="radio" name="question_3_1" value="C" [(ngModel)]="userAnswers.question_3['1']"><span class="mark"></span><b class="form"><i>たまご</i></b></label></p>
 									</ul>
 								</li>
 								<li>
 									<h2><span>卵</span></h2>
 									<ul>
 
-										<li><label><input type="radio" name="question_3_2" value="A"><span class="mark"></span><b class="form"><i>さかな</i></b></label></li>
-										<li><label><input type="radio" name="question_3_2" value="B"><span class="mark"></span><b class="form"><i>にく</i></b></label></li>
-										<li><label><input type="radio" name="question_3_2" value="C"><span class="mark"></span><b class="form"><i>たまご</i></b></label></li>
+										<li><label><input type="radio" name="question_3_2" value="A" [(ngModel)]="userAnswers.question_3['2']"><span class="mark"></span><b class="form"><i>さかな</i></b></label></li>
+										<li><label><input type="radio" name="question_3_2" value="B" [(ngModel)]="userAnswers.question_3['2']"><span class="mark"></span><b class="form"><i>にく</i></b></label></li>
+										<li><label><input type="radio" name="question_3_2" value="C" [(ngModel)]="userAnswers.question_3['2']"><span class="mark"></span><b class="form"><i>たまご</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>肉</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_3" value="A"><span class="mark"></span><b class="form"><i>さかな</i></b></label></li>
-										<li><label><input type="radio" name="question_3_3" value="B"><span class="mark"></span><b class="form"><i>にく</i></b></label></li>
-										<li><label><input type="radio" name="question_3_3" value="C"><span class="mark"></span><b class="form"><i>たまご</i></b></label></li>
+										<li><label><input type="radio" name="question_3_3" value="A" [(ngModel)]="userAnswers.question_3['3']"><span class="mark"></span><b class="form"><i>さかな</i></b></label></li>
+										<li><label><input type="radio" name="question_3_3" value="B" [(ngModel)]="userAnswers.question_3['3']"><span class="mark"></span><b class="form"><i>にく</i></b></label></li>
+										<li><label><input type="radio" name="question_3_3" value="C" [(ngModel)]="userAnswers.question_3['3']"><span class="mark"></span><b class="form"><i>たまご</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>食</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_4" value="A"><span class="mark"></span><b class="form"><i>たべます</i></b></label></li>
-										<li><label><input type="radio" name="question_3_4" value="B"><span class="mark"></span><b class="form"><i>なべます</i></b></label></li>
-										<li><label><input type="radio" name="question_3_4" value="C"><span class="mark"></span><b class="form"><i>はべます</i></b></label></li>
+										<li><label><input type="radio" name="question_3_4" value="A" [(ngModel)]="userAnswers.question_3['4']"><span class="mark"></span><b class="form"><i>たべます</i></b></label></li>
+										<li><label><input type="radio" name="question_3_4" value="B" [(ngModel)]="userAnswers.question_3['4']"><span class="mark"></span><b class="form"><i>なべます</i></b></label></li>
+										<li><label><input type="radio" name="question_3_4" value="C" [(ngModel)]="userAnswers.question_3['4']"><span class="mark"></span><b class="form"><i>はべます</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>飲</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_5" value="A"><span class="mark"></span><b class="form"><i>おみます</i></b></label></li>
-										<li><label><input type="radio" name="question_3_5" value="B"><span class="mark"></span><b class="form"><i>のみます</i></b></label></li>
-										<li><label><input type="radio" name="question_3_5" value="C"><span class="mark"></span><b class="form"><i>もみます</i></b></label></li>
+										<li><label><input type="radio" name="question_3_5" value="A" [(ngModel)]="userAnswers.question_3['5']"><span class="mark"></span><b class="form"><i>おみます</i></b></label></li>
+										<li><label><input type="radio" name="question_3_5" value="B" [(ngModel)]="userAnswers.question_3['5']"><span class="mark"></span><b class="form"><i>のみます</i></b></label></li>
+										<li><label><input type="radio" name="question_3_5" value="C" [(ngModel)]="userAnswers.question_3['5']"><span class="mark"></span><b class="form"><i>もみます</i></b></label></li>
 
 									</ul>
 								</li>
@@ -271,41 +277,41 @@
 								<li>
 									<h2><span>大</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_6" value="A"><span class="mark"></span><b class="form"><i>おきい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_6" value="B"><span class="mark"></span><b class="form"><i>おいきい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_6" value="C"><span class="mark"></span><b class="form"><i>おおきい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_6" value="A" [(ngModel)]="userAnswers.question_3['6']"><span class="mark"></span><b class="form"><i>おきい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_6" value="B" [(ngModel)]="userAnswers.question_3['6']"><span class="mark"></span><b class="form"><i>おいきい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_6" value="C" [(ngModel)]="userAnswers.question_3['6']"><span class="mark"></span><b class="form"><i>おおきい</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>小</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_7" value="A"><span class="mark"></span><b class="form"><i>しいさい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_7" value="B"><span class="mark"></span><b class="form"><i>ちいさい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_7" value="C"><span class="mark"></span><b class="form"><i>きいさい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_7" value="A" [(ngModel)]="userAnswers.question_3['7']"><span class="mark"></span><b class="form"><i>しいさい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_7" value="B" [(ngModel)]="userAnswers.question_3['7']"><span class="mark"></span><b class="form"><i>ちいさい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_7" value="C" [(ngModel)]="userAnswers.question_3['7']"><span class="mark"></span><b class="form"><i>きいさい</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>新</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_8" value="A"><span class="mark"></span><b class="form"><i>あちたしい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_8" value="B"><span class="mark"></span><b class="form"><i>あたらしい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_8" value="C"><span class="mark"></span><b class="form"><i>あさらしい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_8" value="A" [(ngModel)]="userAnswers.question_3['8']"><span class="mark"></span><b class="form"><i>あちたしい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_8" value="B" [(ngModel)]="userAnswers.question_3['8']"><span class="mark"></span><b class="form"><i>あたらしい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_8" value="C" [(ngModel)]="userAnswers.question_3['8']"><span class="mark"></span><b class="form"><i>あさらしい</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>古</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_9" value="A"><span class="mark"></span><b class="form"><i>ふるい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_9" value="B"><span class="mark"></span><b class="form"><i>ふろい</i></b></label></li>
-										<li><label><input type="radio" name="question_3_9" value="C"><span class="mark"></span><b class="form"><i>ひろい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_9" value="A" [(ngModel)]="userAnswers.question_3['9']"><span class="mark"></span><b class="form"><i>ふるい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_9" value="B" [(ngModel)]="userAnswers.question_3['9']"><span class="mark"></span><b class="form"><i>ふろい</i></b></label></li>
+										<li><label><input type="radio" name="question_3_9" value="C" [(ngModel)]="userAnswers.question_3['9']"><span class="mark"></span><b class="form"><i>ひろい</i></b></label></li>
 									</ul>
 								</li>
 								<li>
 									<h2><span>金</span></h2>
 									<ul>
-										<li><label><input type="radio" name="question_3_10" value="A"><span class="mark"></span><b class="form"><i>きようび</i></b></label></li>
-										<li><label><input type="radio" name="question_3_10" value="B"><span class="mark"></span><b class="form"><i>きいようび</i></b></label></li>
-										<li><label><input type="radio" name="question_3_10" value="C"><span class="mark"></span><b class="form"><i>きんようび</i></b></label></li>
+										<li><label><input type="radio" name="question_3_10" value="A" [(ngModel)]="userAnswers.question_3['10']"><span class="mark"></span><b class="form"><i>きようび</i></b></label></li>
+										<li><label><input type="radio" name="question_3_10" value="B" [(ngModel)]="userAnswers.question_3['10']"><span class="mark"></span><b class="form"><i>きいようび</i></b></label></li>
+										<li><label><input type="radio" name="question_3_10" value="C" [(ngModel)]="userAnswers.question_3['10']"><span class="mark"></span><b class="form"><i>きんようび</i></b></label></li>
 									</ul>
 								</li>
 							</ol>
@@ -313,8 +319,9 @@
 						</li>
 					</ul>
 					<div class="btn_pane">
-				<button class="answer" (click)="evaluarKanji()">Respuesta</button>
-			<span id="myresults3" class="my-results">Cual sera tu resultado...</span>
+				<button class="answer" (click)="evaluateAnswers('question_3')">Respuesta</button>
+				<button class="again" (click)="resetQuiz('question_3')">Otra vez</button>
+			<span id="myresults3" class="my-results">{{ results.question_3}}</span>
 		</div>
 	</div>
 </section>
