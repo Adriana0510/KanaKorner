@@ -6,9 +6,9 @@
             <img src="/assets/Images/Logo.png" alt="Logo">
         </div>
         <h1>Login</h1>
-        <form class="login-form" action="#" method="post">
-            <input type="text" placeholder="Username" name="username" required>
-            <input type="password" placeholder="Password" name="password" required>
+        <form (ngSubmit)="iniciarSesion()" #inicioDeSecionForm="ngForm" class="login-form">
+            <input type="text" [(ngModel)]="usuario.usuario" placeholder="Username" name="usuario" required>
+            <input type="password" [(ngModel)]="usuario.contrasena" placeholder="Password" name="contrasena" required>
             <button type="submit">Log In</button>
         </form>
         <div class="create-account-link">

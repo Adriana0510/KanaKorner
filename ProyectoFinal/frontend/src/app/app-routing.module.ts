@@ -6,14 +6,16 @@ import { InicioDeSecionComponent } from './pages/inicio-de-secion/inicio-de-seci
 import { KatakanaComponent } from './pages/katakana/katakana.component';
 import { KanjiComponent } from './pages/kanji/kanji.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { PruebaComponent } from './pages/prueba/prueba.component';
 
 const routes: Routes = [
-  {path: '',component:InicioDeSecionComponent},
+  {path: 'inicio',component:InicioDeSecionComponent},
   {path: 'registro',component:RegistroComponent},
-  //{path: '',component:StartComponent},
-  //{path: 'hiragana',component:HiraganaComponent},
-  //{path: 'katakana',component:KatakanaComponent},
-  //{path: 'kanji',component:KanjiComponent}
+  {path: 'menu',component:StartComponent},
+  {path: 'hiragana',component:HiraganaComponent},
+  {path: 'katakana',component:KatakanaComponent},
+  {path: 'kanji',component:KanjiComponent},
+  {path: 'prueba',component:PruebaComponent}
 ];
 
 @NgModule({

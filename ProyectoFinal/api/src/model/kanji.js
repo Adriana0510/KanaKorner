@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const hiraganaSchema = new Schema({
+const kanjiSchema = new Schema({
     id: {type: String},
     kana: {type: String },
     romanji:{type:String },
@@ -10,6 +10,6 @@ const hiraganaSchema = new Schema({
     palabraEspañol:{type:String }
 }, {versionKey:false});
 
-const hiragana = mongoose.model('hiragana', hiraganaSchema);
+const kanji = mongoose.model('kanji', kanjiSchema);
 
-module.exports = hiragana;
+module.exports = kanji;

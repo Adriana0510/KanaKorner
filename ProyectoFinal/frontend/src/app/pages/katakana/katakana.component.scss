@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 650px;
+}
+.button-container {
+    position: relative;
+    text-align: center; 
+}
+
+.kana-button
+{
+    display: inline-block;
+    margin: 10px;
+    padding: 40px 40px;
+    background-color: #FFFFFF;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    color: #000000;
+    position: relative;
+}
+
+.kana-button:hover{
+    background-color: #fffdf7;
+}
+
+.button-text {
+    position: absolute;
+    top: 6px;
+    left: 52%;
+    transform: translateX(-50%);
+}
+
+.button-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 275px;
+}
+
+.header-rectangle {
+    background-color: white;
+    width: 100%;
+    height: 200px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.title-container {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 25px;
+}
+
+.logo-image {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    width: 175px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.button-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: left;
+}
+
+.button-container li {
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-list-container {
+    clear: both;
+}
+
+.horizontal-list {
+    list-style: none;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 50px;
+}

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartComponent } from './pages/start/start.component';
@@ -12,6 +11,9 @@ import { ModalComponent } from './modal/modal.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PruebaComponent } from './pages/prueba/prueba.component';
+import { Prueba2Component } from './pages/prueba2/prueba2.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     KanjiComponent,
     InicioDeSecionComponent,
     ModalComponent,
-    RegistroComponent
+    RegistroComponent,
+    PruebaComponent,
+    Prueba2Component
    
   ],
   imports: [

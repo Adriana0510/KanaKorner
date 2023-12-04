@@ -12,5 +12,6 @@ export class RegistroService {
 
   registrarUsuario(formData: object): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}usuario/crear`, formData);
+    
   }
 }

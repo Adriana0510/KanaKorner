@@ -45,9 +45,28 @@ function eliminar(req, res){
     
 }
 
+async function login(req, res) {
+  try {
+    const { usuario, contrasena: contrasena } = req.body;
+
+    const user = await Usuario.findOne({ usuario });
+
+    if (!user || user.contraseña !== contrasena) {
+      return res.status(401).json({ error: 'Credenciales inválidas' }); 
+    }
+
+    return res.status(200).json({ message: 'Inicio de sesión exitoso' });
+  } catch (error) {
+    console.error('Error en el servidor:', error);
+    return res.status(500).json({ error: 'Error en el servidor' });
+  }
+}
+
+
 module.exports = {
     visualizar, 
     crear,
     editar, 
-    eliminar
+    eliminar,
+    login
 }

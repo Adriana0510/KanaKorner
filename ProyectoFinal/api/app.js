@@ -14,7 +14,16 @@ const usuarios = require('./src/router/usuarios');
 app.use("/usuario",usuarios)
 
 const estudiantes = require('./src/router/estudiantes');
-app.use(estudiantes);
+app.use("/estudiante",estudiantes);
+
+const hiraganas = require('./src/router/hiraganas');
+app.use("/hiragana",hiraganas);
+
+const katakanas = require('./src/router/katakanas');
+app.use("/katakana",katakanas);
+
+const kanjis = require('./src/router/kanjis');
+app.use("/kanji",kanjis);
 
 app.get('/', (req, res)=>{
     res.send('Probando Integracion');
