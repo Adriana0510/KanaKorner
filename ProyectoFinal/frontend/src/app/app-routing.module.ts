@@ -10,7 +10,7 @@ import { PruebaComponent } from './pages/prueba/prueba.component';
 import { ModalComponent } from './pages/modal/modal.component';
 
 const routes: Routes = [
-  {path: 'inicio',component:InicioDeSecionComponent},
+  {path: '',component:InicioDeSecionComponent},
   {path: 'registro',component:RegistroComponent},
   {path: 'menu',component:StartComponent},
   {path: 'hiragana',component:HiraganaComponent},
