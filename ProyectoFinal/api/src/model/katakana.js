@@ -7,7 +7,7 @@ const katakanaSchema = new Schema({
     kana: {type: String },
     romanji:{type:String },
     palabraJapones:{type:String },
-    palabraEspañol:{type:String }
+    palabraEspanol:{type:String }
 }, {versionKey:false});
 
 const katakana = mongoose.model('katakana', katakanaSchema);

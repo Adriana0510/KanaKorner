@@ -7,7 +7,7 @@ const kanjiSchema = new Schema({
     kana: {type: String },
     romanji:{type:String },
     palabraJapones:{type:String },
-    palabraEspañol:{type:String }
+    palabraEspanol:{type:String }
 }, {versionKey:false});
 
 const kanji = mongoose.model('kanji', kanjiSchema);

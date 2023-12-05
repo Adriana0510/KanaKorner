@@ -6,7 +6,7 @@ function crear(req, res){
         kana: req.body.kana,
         romanji: req.body.romanji,
         palabraJapones: req.body.palabraJapones,
-        palabraEspañol: req.body.palabraEspañol
+        palabraEspanol: req.body.palabraEspanol
     })
     hiragana.save().then(
         res.redirect('/')
@@ -14,12 +14,32 @@ function crear(req, res){
 }
 
 //Mostrar
-function visualizar(req, res){
-    Hiragana.find({}).then(Hiragana=>{
-        if(Hiragana.length) return res.render('index', {Hiragana:Hiragana})
-        return res.status('204').send({message:'NO CONTENT'});
+function visualizar(req, res) {
+    Hiragana.find({})
+        .then(hiraganas => {
+            if (hiraganas.length > 0) {
+                res.status(200).json({ Hiragana: hiraganas });
+            } else {
+                res.status(204).json({ message: 'NO CONTENT' });
+            }
+        })
+        .catch(err => res.status(500).json({ error: err.message }));
+}
 
-    }).catch(err=>res.status(500).send({err}))
+function getHiraganaByKana(req, res) {
+    const { kana } = req.params;
+
+    Hiragana.findOne({ kana })
+        .then(hiragana => {
+            if (hiragana) {
+                res.status(200).json(hiragana);
+            } else {
+                res.status(404).json({ message: 'Hiragana no encontrado' });
+            }
+        })
+        .catch(err => {
+            res.status(500).json({ error: err.message });
+        });
 }
 
 function editar(req, res){
@@ -27,8 +47,8 @@ function editar(req, res){
     const kana = req.body.kana_editar
     const romanji = req.body.romanji_editar
     const palabraJapones = req.body.palabraJapones_editar
-    const palabraEspañol = req.body.palabraEspañol_editar
-    Hiragana.findByIdAndUpdate(id, {kana:kana, romanji:romanji, palabraJapones:palabraJapones, palabraEspañol:palabraEspañol}).then(
+    const palabraEspanol = req.body.palabraEspanol_editar
+    Hiragana.findByIdAndUpdate(id, {kana:kana, romanji:romanji, palabraJapones:palabraJapones, palabraEspanol:palabraEspanol}).then(
         res.redirect('/')
     ).catch(err => res.status(500).send({err}))
 }
@@ -44,5 +64,6 @@ module.exports = {
     visualizar, 
     crear,
     editar, 
-    eliminar
+    eliminar,
+    getHiraganaByKana
 }

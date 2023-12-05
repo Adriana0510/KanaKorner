@@ -1,7 +1,6 @@
-// hiragana.component.ts
 import { Component } from '@angular/core';
-import { AuthService } from './hiragana.service';
 import { Hiragana } from './hiragana';
+import { HiraganaService } from './hiragana.service';
 
 @Component({
   selector: 'app-hiragana',
@@ -12,16 +11,17 @@ export class HiraganaComponent {
   isModalOpen = false;
   hiraganaData: Hiragana[] = [];
 
-  constructor(private authService: AuthService) {}
+  constructor(private hiraganaService: HiraganaService) {}
 
-  openModal() {
-    this.authService.vizualizar().subscribe((data: Hiragana[]) => {
-      this.hiraganaData = data;
-      this.isModalOpen = true;
+  openModal(kana: string) {
+    this.isModalOpen = true;
+    this.hiraganaService.vizualizarByKana(kana).subscribe(data => {
+        this.hiraganaData = data;
+        console.log('Modal opened with data:', this.hiraganaData);
     });
-  }
+}
 
   closeModal() {
-    this.isModalOpen = false;
-  }
+    this.isModalOpen = false;
+  }
 }

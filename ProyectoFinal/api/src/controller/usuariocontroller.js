@@ -1,5 +1,6 @@
 const Usuario = require('../model/usuario');
 const Estudiante = require('../model/estudiante');
+const usuario = require('../model/usuario');
 
 //insertar
 async function crear(req, res) {
@@ -21,20 +22,15 @@ async function crear(req, res) {
 
 //Mostrar
 function visualizar(req, res) {
-  // Using the find method to retrieve all users from the database
-  Usuario.find({}).then(usuarios => {
-      // Checking if there are users found
-      if (usuarios.length) {
-          // Rendering the 'index' view with the retrieved users
-          return res.render('index', { Usuario: usuarios });
-      }
-
-      // If no users are found, sending a 204 status code with a message
-      return res.status(204).send({ message: 'NO CONTENT' });
-  }).catch(err => {
-      // Handling errors by sending a 500 Internal Server Error response
-      res.status(500).send({ err });
-  });
+  Usuario.find({})
+      .then(usuario => {
+          if (usuario.length > 0) {
+              res.status(200).json({ Usuario: usuario });
+          } else {
+              res.status(204).json({ message: 'NO CONTENT' });
+          }
+      })
+      .catch(err => res.status(500).json({ error: err.message }));
 }
 
 

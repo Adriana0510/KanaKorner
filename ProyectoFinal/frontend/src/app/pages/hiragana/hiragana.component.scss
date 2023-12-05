@@ -106,7 +106,33 @@ body {
     cursor: pointer;
   }
 
-.modal-button{
+.modal-button:hover{
     background-color: #dc498b;
   }
   
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kana-romanji {
+    display: flex;
+}
+
+.kana, .romanji {
+    font-size: 175px;
+    margin-right: 23px; 
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.japanese, .spanish {
+    font-size: 45px; 
+    margin-bottom: 5px;
+    display: flex;
+    align-items:center; 
+}

@@ -1,3 +1,4 @@
+const estudiante = require('../model/estudiante');
 const Estudiante = require('../model/estudiante');
 
 //insertar
@@ -14,12 +15,16 @@ function crear(req, res){
 }
 
 //Mostrar
-function visualizar(req, res){
-    Estudiante.find({}).then(Estudiante=>{
-        if(Estudiante.length) return res.render('index', {Estudiante:Estudiante})
-        return res.status('204').send({message:'NO CONTENT'});
-
-    }).catch(err=>res.status(500).send({err}))
+function visualizar(req, res) {
+    Estudiante.find({})
+        .then(estudiante => {
+            if (estudiante.length > 0) {
+                res.status(200).json({ Estudiante: estudiante });
+            } else {
+                res.status(204).json({ message: 'NO CONTENT' });
+            }
+        })
+        .catch(err => res.status(500).json({ error: err.message }));
 }
 
 function editar(req, res){

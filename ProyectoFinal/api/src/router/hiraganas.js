@@ -11,7 +11,11 @@ router.post('/crear', hiraganacontroller.crear );
 
 //Post
 router.post('/editar', hiraganacontroller.editar);
+
 //delete
 router.get('/borrar/:id', hiraganacontroller.eliminar)
+
+//Mostrar por kana
+router.get('/:kana', hiraganacontroller.getHiraganaByKana)
 
 module.exports = router;
