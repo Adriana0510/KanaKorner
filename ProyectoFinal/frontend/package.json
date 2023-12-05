@@ -23,6 +23,7 @@
     "bulma": "^0.9.4",
     "mdb-angular-ui-kit": "^5.1.0",
     "mdbootstrap": "^4.20.0",
+    "ng-bootstrap": "^1.6.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

@@ -5,7 +5,7 @@
     
         </style>
     </head>
-<body>
+<body> 
 
     <div class="header-rectangle">
         <img src='/assets/Images/Logo.png' class="logo-image">
@@ -21,7 +21,7 @@
             <ul class="horizontal-list">
                 <li class="button-container">
                     <a class="kana-button" >
-                        <span  class = "button-text">あ</span >
+                        <span  class = "button-text" (click)="openModal()">あ</span >
                     </a>
                 </li>
                 <li class="button-container">
@@ -328,6 +328,15 @@
             </div>
             
     </section> 
-
+    <div *ngIf="isModalOpen" class="modal-container">
+        <app-modal [isOpen]="false">
+        <ul>
+            <li *ngFor="let item of hiraganaData">
+            {{ item.kana }} - {{ item.romanji }} - {{ item.palabraJapones }} - {{ item.palabraEspanol }}
+            </li>
+        </ul>
+        <button class="modal-button" (click)="closeModal()">Cerrar</button>
+        </app-modal>
+    </div>
 </body>
 </html>

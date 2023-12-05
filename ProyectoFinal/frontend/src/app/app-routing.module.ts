@@ -7,6 +7,7 @@ import { KatakanaComponent } from './pages/katakana/katakana.component';
 import { KanjiComponent } from './pages/kanji/kanji.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { PruebaComponent } from './pages/prueba/prueba.component';
+import { ModalComponent } from './pages/modal/modal.component';
 
 const routes: Routes = [
   {path: 'inicio',component:InicioDeSecionComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'hiragana',component:HiraganaComponent},
   {path: 'katakana',component:KatakanaComponent},
   {path: 'kanji',component:KanjiComponent},
-  {path: 'prueba',component:PruebaComponent}
+  {path: 'prueba',component:PruebaComponent},
+  {path: '' ,component:ModalComponent}
 ];
 
 @NgModule({

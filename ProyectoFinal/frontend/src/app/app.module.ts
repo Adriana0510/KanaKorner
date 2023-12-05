@@ -7,12 +7,11 @@ import { HiraganaComponent } from './pages/hiragana/hiragana.component';
 import { KatakanaComponent } from './pages/katakana/katakana.component';
 import { KanjiComponent } from './pages/kanji/kanji.component';
 import { InicioDeSecionComponent } from './pages/inicio-de-secion/inicio-de-secion.component';
-import { ModalComponent } from './modal/modal.component';
+import { ModalComponent } from './pages/modal/modal.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PruebaComponent } from './pages/prueba/prueba.component';
-import { Prueba2Component } from './pages/prueba2/prueba2.component';
 
 
 @NgModule({
@@ -25,8 +24,7 @@ import { Prueba2Component } from './pages/prueba2/prueba2.component';
     InicioDeSecionComponent,
     ModalComponent,
     RegistroComponent,
-    PruebaComponent,
-    Prueba2Component
+    PruebaComponent
    
   ],
   imports: [

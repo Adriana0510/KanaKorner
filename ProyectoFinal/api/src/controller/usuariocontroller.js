@@ -20,13 +20,23 @@ async function crear(req, res) {
 }
 
 //Mostrar
-function visualizar(req, res){
-    Usuario.find({}).then(Usuario=>{
-        if(Usuario.length) return res.render('index', {Usuario:Usuario})
-        return res.status('204').send({message:'NO CONTENT'});
+function visualizar(req, res) {
+  // Using the find method to retrieve all users from the database
+  Usuario.find({}).then(usuarios => {
+      // Checking if there are users found
+      if (usuarios.length) {
+          // Rendering the 'index' view with the retrieved users
+          return res.render('index', { Usuario: usuarios });
+      }
 
-    }).catch(err=>res.status(500).send({err}))
+      // If no users are found, sending a 204 status code with a message
+      return res.status(204).send({ message: 'NO CONTENT' });
+  }).catch(err => {
+      // Handling errors by sending a 500 Internal Server Error response
+      res.status(500).send({ err });
+  });
 }
+
 
 function editar(req, res){
     const id = req.body.id_editar
