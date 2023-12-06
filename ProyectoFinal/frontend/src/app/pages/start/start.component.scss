@@ -12,12 +12,28 @@ body {
 }
 
 .button-row {
-            display: flex;
-            justify-content: space-between;
-            width: 70%; 
-        }
+    display: flex;
+    justify-content: space-between;
+    width: 70%; 
+}
 
+.button-mantenimiento {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    margin: 10px; 
+    color: #fff; 
+    background-color: #e95f9d;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px; 
+}
 
+.button-mantenimiento:hover {
+    background-color: #dc498b; 
+}
 .hiragana-button,
 .katakana-button,
 .kanji-button,

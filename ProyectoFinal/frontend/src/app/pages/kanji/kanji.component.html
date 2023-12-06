@@ -20,32 +20,32 @@
             <!-- ///////////////////////////////////// -->
             <ul class="horizontal-list">
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('魚')">
                         <span class="button-text">魚</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('肉')">
                         <span class="button-text">肉</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('卵')">
                         <span class="button-text">卵</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('水')">
                         <span class="button-text">水</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('食')">
                         <span class="button-text">食</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('飲')">
                         <span class="button-text">飲</span>
                     </a>
                 </li>
@@ -54,22 +54,22 @@
             <!-- ///////////////////////////////////// -->
             <ul class="horizontal-list">
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('大')">
                         <span class="button-text">大</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('小')">
                         <span class="button-text">小</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('新')">
                         <span class="button-text">新</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('古')">
                         <span class="button-text">古</span>
                     </a>
                 </li>
@@ -78,60 +78,79 @@
             <!-- ///////////////////////////////////// -->
             <ul class="horizontal-list">
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('時')">
                         <span class="button-text">時</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('分')">
                         <span class="button-text">分</span>
                     </a>
                 </li>
                 <li class="button-container">
-                    <a class="kana-button">
+                    <a class="kana-button" (click)="openModal('半')">
                         <span class="button-text">半</span>
                     </a>
                 </li>
             </ul>
             <ul class="horizontal-list">
                 <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('月')">
                     <span class="button-text">月</span>
                 </a>
             </li>
             <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('火')">
                     <span class="button-text">火</span>
                 </a>
             </li>
             <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('水.')">
                     <span class="button-text">水</span>
                 </a>
             </li>
             <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('あ')">
                     <span class="button-text">木</span>
                 </a>
             </li>
             <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('金')">
                     <span class="button-text">金</span>
                 </a>
             </li>
             <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('土')">
                     <span class="button-text">土</span>
                 </a>
             </li>
             <li class="button-container">
-                <a class="kana-button">
+                <a class="kana-button" (click)="openModal('日')">
                     <span class="button-text">日</span>
                 </a>
             </li>
         </ul>
         </div>
     </section>
+
+    <div *ngIf="isModalOpen" class="modal-overlay">
+        <div class="modal-container">
+            <app-modal [isOpen]="isModalOpen">
+                <div class="modal-header">
+                    <div class="kana-romanji">
+                        <div class="kana">{{ kanjiData[0].kana }}</div>
+                        <div class="romanji">{{ kanjiData[0].romanji }}</div>
+                    </div>
+                    <div class="right-column">
+                        <div class="japanese">{{ kanjiData[0].palabraJapones }}</div>
+                        <div class="spanish">{{ kanjiData[0].palabraEspanol }}</div>
+                    </div>
+                </div>
+                <button class="modal-button" (click)="closeModal()">Cerrar</button>
+            </app-modal>
+        </div>
+    </div>
+
 </body>
 </html>  
     

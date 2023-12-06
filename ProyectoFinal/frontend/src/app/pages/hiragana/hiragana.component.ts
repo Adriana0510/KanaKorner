@@ -25,3 +25,4 @@ export class HiraganaComponent {
     this.isModalOpen = false;
   }
 }
+　

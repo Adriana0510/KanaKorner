@@ -27,15 +27,15 @@ function visualizar(req, res) {
         .catch(err => res.status(500).json({ error: err.message }));
 }
 
-function getHiraganaByKana(req, res) {
+function getKanjiByKana(req, res) {
     const { kana } = req.params;
 
-    Hiragana.findOne({ kana })
+    Kanji.findOne({ kana })
         .then(hiragana => {
             if (hiragana) {
                 res.status(200).json(hiragana);
             } else {
-                res.status(404).json({ message: 'Hiragana no encontrado' });
+                res.status(404).json({ message: 'Kanji no encontrado' });
             }
         })
         .catch(err => {
@@ -65,5 +65,6 @@ module.exports = {
     visualizar, 
     crear,
     editar, 
-    eliminar
+    eliminar,
+    getKanjiByKana
 }

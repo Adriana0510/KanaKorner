@@ -12,6 +12,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PruebaComponent } from './pages/prueba/prueba.component';
+import { MantenimientoComponent } from './pages/mantenimiento/mantenimiento.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PruebaComponent } from './pages/prueba/prueba.component';
     InicioDeSecionComponent,
     ModalComponent,
     RegistroComponent,
-    PruebaComponent
+    PruebaComponent,
+    MantenimientoComponent
    
   ],
   imports: [

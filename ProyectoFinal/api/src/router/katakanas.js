@@ -14,4 +14,7 @@ router.post('/editar', katakanacontroller.editar);
 //delete
 router.get('/borrar/:id', katakanacontroller.eliminar)
 
+//Mostrar por kana
+router.get('/:kana', katakanacontroller.getKatakanaByKana)
+
 module.exports = router;

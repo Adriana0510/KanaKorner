@@ -27,18 +27,21 @@ function visualizar(req, res) {
         .catch(err => res.status(500).json({ error: err.message }));
 }
 
-function getHiraganaByKana(req, res) {
+function getKatakanaByKana(req, res) {
     const { kana } = req.params;
+    console.log('Requested Kana:', kana);
 
-    Hiragana.findOne({ kana })
-        .then(hiragana => {
-            if (hiragana) {
-                res.status(200).json(hiragana);
+    Katakana.findOne({ kana })
+        .then(katakana => {
+            console.log('Response from database:', katakana);
+            if (katakana) {
+                res.status(200).json(katakana);
             } else {
-                res.status(404).json({ message: 'Hiragana no encontrado' });
+                res.status(404).json({ message: 'Katakana no encontrado' });
             }
         })
         .catch(err => {
+            console.log('Error:', err);
             res.status(500).json({ error: err.message });
         });
 }
@@ -65,5 +68,6 @@ module.exports = {
     visualizar, 
     crear,
     editar, 
-    eliminar
+    eliminar,
+    getKatakanaByKana
 }

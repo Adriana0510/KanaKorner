@@ -23,3 +23,4 @@ vizualizarByKana(kana: string): Observable<Hiragana[]> {
     );
 }
 }
+　
