@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<div class="container">
+    <div class="table-container">
+      <h2>Hiragana</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Kana</th>
+            <th>Romanji</th>
+            <th>Palabra Japones</th>
+            <th>Palabra Español</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hiragana of hiraganas">
+            <td>{{ hiragana.id }}</td>
+            <td>{{ hiragana.kana }}</td>
+            <td>{{ hiragana.romanji }}</td>
+            <td>{{ hiragana.palabraJapones }}</td>
+            <td>{{ hiragana.palabraEspanol }}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="form-container">
+    <h2>Añadir Nuevo Hiragana</h2>
+    <form (submit)="crearHiraganas()">
+        <label for="kana">Kana:</label>
+        <input type="text" id="kana" name="kana" [(ngModel)]="nuevoHiragana.kana" required>
+
+        <label for="romanji">Romanji:</label>
+        <input type="text" id="romanji" name="romanji" [(ngModel)]="nuevoHiragana.romanji" required>
+
+        <label for="palabraJapopnes">Palabra Japones:</label>
+        <input type="email" id="palabraJapopnes" name="palabraJapopnes" [(ngModel)]="nuevoHiragana.palabraJapopnes" required>
+
+        <label for="palabraEspanol">Palabra Español:</label>
+        <input type="text" id="palabraEspanol" name="palabraEspanol" [(ngModel)]="nuevoHiragana.palabraEspanol" required>
+
+        <button type="submit">Agregar Hiragana</button>
+    </form>
+</div>
+</div>
+</html>

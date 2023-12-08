@@ -8,7 +8,7 @@ import { KanjiComponent } from './pages/kanji/kanji.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { PruebaComponent } from './pages/prueba/prueba.component';
 import { ModalComponent } from './pages/modal/modal.component';
-import { MantenimientoComponent } from './pages/mantenimiento/mantenimiento.component';
+import { MantenimientoEstudianteComponent } from './pages/mantenimiento-estudiante/mantenimiento-estudiante.component';
 
 const routes: Routes = [
   {path: 'inicio',component:InicioDeSecionComponent},
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'kanji',component:KanjiComponent},
   {path: 'prueba',component:PruebaComponent},
   {path: '' ,component:ModalComponent},
-  {path: 'mantenimiento' ,component:MantenimientoComponent},
+  {path: 'mantenimientoEstudiante' ,component:MantenimientoEstudianteComponent}
 ];
 
 @NgModule({

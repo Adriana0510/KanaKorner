@@ -1,83 +1,84 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
+.button-container {
+  position: relative;
+  text-align: center;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  width: 70%; 
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 25px 100px;
+  background-color: #e95f9d;
+  border-color:#e95f9d;
+  border-radius: 10px;
+  font-size: 35px;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #dc498b;
+}
+
+.button-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.button-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 275px;
+}
 .header-rectangle {
-    background-color: white;
-    width: 100%;
-    height: 200px; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; 
+  background-color: white;
+  width: 100%;
+  height: 200px; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; 
 }
-
+.rectangle {
+  background-color: white;
+  width: 100%;
+  height: 100px; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100; 
+}
 .title-container {
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    font-size: 25px;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-size: 30px;
 }
 
 .logo-image {
-    position: absolute;
-    top: 5%;
-    left: 8%;
-    width: 175px;
-    height: 150px;
-    margin-right: 20px;
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  width: 175px;
+  height: 150px;
+  margin-right: 20px;
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: white;
-  }
-
-  th, td {
-    border: 2px solid #e95f9d;
-    text-align: left;
-    padding: 8px;
-  }
-
-  th {
-    background-color: white;
-  }
-
-  button {
-
-    background-color: #e95f9d;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-
-  .form-container {
-    margin-top: 20px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input {
-    margin-bottom: 10px;
-  }
-
-  .container {
-    display: flex;
-  }
-
-  .table-container,
-  .form-container {
-    flex: 1;
-    padding: 10px;
-  }
-
-  

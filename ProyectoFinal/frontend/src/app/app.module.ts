@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PruebaComponent } from './pages/prueba/prueba.component';
 import { MantenimientoComponent } from './pages/mantenimiento/mantenimiento.component';
+import { MantenimientoEstudianteComponent } from './pages/mantenimiento-estudiante/mantenimiento-estudiante.component';
+import { MantenimientoUsuarioComponent } from './pages/mantenimiento-usuario/mantenimiento-usuario.component';
+import { MantenimientoHiraganaComponent } from './pages/mantenimiento-hiragana/mantenimiento-hiragana.component';
+import { MantenimientoKatakanaComponent } from './pages/mantenimiento-katakana/mantenimiento-katakana.component';
+import { MantenimientoKanjiComponent } from './pages/mantenimiento-kanji/mantenimiento-kanji.component';
 
 
 @NgModule({
@@ -26,7 +31,12 @@ import { MantenimientoComponent } from './pages/mantenimiento/mantenimiento.comp
     ModalComponent,
     RegistroComponent,
     PruebaComponent,
-    MantenimientoComponent
+    MantenimientoComponent,
+    MantenimientoEstudianteComponent,
+    MantenimientoUsuarioComponent,
+    MantenimientoHiraganaComponent,
+    MantenimientoKatakanaComponent,
+    MantenimientoKanjiComponent
    
   ],
   imports: [

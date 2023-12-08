@@ -17,15 +17,16 @@ function crear(req, res){
 //Mostrar
 function visualizar(req, res) {
     Estudiante.find({})
-        .then(estudiante => {
-            if (estudiante.length > 0) {
-                res.status(200).json({ Estudiante: estudiante });
+        .then(estudiantes => {
+            if (estudiantes.length > 0) {
+                res.status(200).json({ Estudiantes: estudiantes });
             } else {
                 res.status(204).json({ message: 'NO CONTENT' });
             }
         })
-        .catch(err => res.status(500).json({ error: err.message }));
+        .catch(err => res.status(500).json({ error: err.message }));
 }
+
 
 function editar(req, res){
     const id = req.body.id_editar
@@ -38,12 +39,20 @@ function editar(req, res){
     ).catch(err => res.status(500).send({err}))
 }
 
-function eliminar(req, res){
-    const id = req.params.id
-    Estudiante.findByIdAndDelete(id).then(
-        res.redirect('/')
-    ).catch(err => res.status(500).send({err}))
-    
+function eliminar(req, res) {
+    const id = req.params.id;
+
+    if (!id) {
+        return res.status(400).json({ error: 'ID de estudiante no proporcionado' });
+    }
+
+    Estudiante.findByIdAndDelete(id)
+        .then(() => {
+            res.status(200).json({ message: 'Estudiante eliminado exitosamente' });
+        })
+        .catch(err => {
+            res.status(500).json({ error: err.message });
+        });
 }
 module.exports = {
     visualizar, 
